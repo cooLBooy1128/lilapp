@@ -1,2 +1,2 @@
-# lilapp
+# Little App
 some little application
