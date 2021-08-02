@@ -10,7 +10,7 @@ from multiprocessing import Pool
 import handle_ts_files
 from make_sounds import make_sounds
 
-KEYWORD = 'ssis-088'.upper()
+KEYWORD = ''.upper()
 # KEYWORD = ''.upper()
 PROCNUM = 1
 
