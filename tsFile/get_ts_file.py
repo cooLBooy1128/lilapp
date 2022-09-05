@@ -157,3 +157,5 @@ if __name__ == '__main__':
             print(f"{time.strftime('%Y-%m-%d %H:%M:%S')} [Pid-{os.getpid()}] Error: {e}")
             time.sleep(3)
     after_download()
+    # 下载后自动关机
+    # after_download(True)
