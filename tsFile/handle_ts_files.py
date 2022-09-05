@@ -83,12 +83,12 @@ def main(basedir, ts_dir, video_id, keyword, start_index, end_index):
 
 
 if __name__ == '__main__':
-    keyword = 'ipx-603'.upper()
-    video_id = '12843'
+    keyword = ''.upper()
+    video_id = ''
     basedir = rf'D:\Downloads\{keyword}_{video_id}'
     ts_dir = r'{}\{}_{}'.format(basedir, keyword, video_id)
     m3u8file = rf'{basedir}\{video_id}.m3u8'
     filenames = M3u8FileParser(m3u8file).get_ts_filenames()
     start, end = get_ts_file.get_index(filenames, len(video_id))
-    end = 10
+    end = 50
     main(basedir, ts_dir, video_id, keyword, start, end)

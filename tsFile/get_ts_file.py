@@ -10,9 +10,9 @@ from multiprocessing import Pool
 import handle_ts_files
 from make_sounds import make_sounds
 
-KEYWORD = 'ssis-088'.upper()
+KEYWORD = 'ipx-352'.upper()
 # KEYWORD = ''.upper()
-PROCNUM = 1
+PROCNUM = 16
 
 
 class URLDownloader:
@@ -79,7 +79,7 @@ class FilesDownloader:
 
 
 def get_baseurl_and_id():
-    url = f'https://jable.tv/videos/{KEYWORD}/?lang=en'
+    url = f'https://jable.tv/videos/{KEYWORD}/'
     resp = URLDownloader(url).get_response()
     root = HTML(resp.read()).getroottree()
     text = root.find('//*[@id="site-content"]/div/div/div[1]/section[1]/script[2]').text
@@ -157,3 +157,4 @@ if __name__ == '__main__':
             print(f"{time.strftime('%Y-%m-%d %H:%M:%S')} [Pid-{os.getpid()}] Error: {e}")
             time.sleep(3)
     after_download()
+    # after_download(True)  # 下载完自动关机
